@@ -1,1 +1,1 @@
-alias config='/usr/bin/git --git-dir=/Users/catherinelee/.cfg/ --work-tree=/Users/catherinelee'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
