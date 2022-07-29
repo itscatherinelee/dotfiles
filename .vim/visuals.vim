@@ -12,6 +12,17 @@ set tabstop=4
 set lbr
 set tw=500
 
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
+" Auto indent
+set ai
+" Smart ident
+set si
+" Wrap lines
+set wrap
+" Show matching brackets when text indicator is over them
+set showmatch
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
