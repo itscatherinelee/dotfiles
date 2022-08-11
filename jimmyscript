@@ -1,0 +1,3 @@
+echo "poo"
+sleep 600
+ls -l | grep ".sh"
