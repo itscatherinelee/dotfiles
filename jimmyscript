@@ -1,0 +1,4 @@
+# Let computer poop and sleep and do anything else it wants
+echo "poo"
+sleep 600
+ls -l | grep ".sh"
