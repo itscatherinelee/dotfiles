@@ -1,10 +1,12 @@
 # dotfiles
 
 ## Initial Set Up
+Run this command
+`curl -o- https://raw.githubusercontent.com/itscatherinelee/dotfiles/master/sendit.sh | bash -x`
+
 1. `alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'`
 2. `echo ".cfg" >> .gitignore`
 3. `git clone --bare https://github.com/itscatherinelee/dotfiles.git $HOME/.cfg`
-4. Run "sendit.sh" script
 5. `alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 6. `config checkout`
 
