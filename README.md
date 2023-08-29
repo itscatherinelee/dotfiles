@@ -1,11 +1,12 @@
 # dotfiles
 
 ## Initial Set Up
-1. Run "sendit.sh" script
-2. echo ".cfg" >> .gitignore
+1. `alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'`
+2. `echo ".cfg" >> .gitignore`
 3. `git clone --bare https://github.com/itscatherinelee/dotfiles.git $HOME/.cfg`
-4. `alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-5. `config checkout`
+4. Run "sendit.sh" script
+5. `alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+6. `config checkout`
 
 you might get this:
 `error: The following untracked working tree files would be overwritten by checkout:
