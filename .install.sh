@@ -17,21 +17,32 @@ echo "Downloading brew"
 # Download homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+pkg_list=(node nvm tmux vim)
+app_list=(atom dropbox iterm2 sublime-text visual-studio-code)
+
 echo "Downloading libraries"
-brew install node
-brew install nvm
-brew install tmux
-brew install vim
+for pkg in "${pkg_list[@]}"
+do
+	echo "Installing $pkg"
+	if brew list $pkg > /dev/null; then
+		echo "Package library $pkg is already installed"
+	else
+		echo "Installing $pkg"
+		brew install $pkg
+	fi
+done
 
 echo "Downloading applications"
-brew install --cask atom
-brew install --cask dropbox
-brew install --cask google-chrome
-brew install --cask iterm2
-brew install --cask spotify
-brew install --cask sublime-text3
-brew install --cask virtualbox
-brew install --cask visual-studio-code
+for app in "${app_list[@]}"
+do
+	echo "Installing $app"
+	if brew list $app > /dev/null; then
+		echo "Application $app is already installed"
+	else
+		echo "Installing $app"
+		brew install --cask $app
+	fi
+done
 
 # Download powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
